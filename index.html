@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
 
     <script>
-      var socket = io("http://pushm3.herokuapp.com");
+      var socket = io(window.location.origin);
       function req(){
         Push.create("HEADING",{
           body:"test",
