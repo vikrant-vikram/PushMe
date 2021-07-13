@@ -26,7 +26,7 @@ app.get("/rasodemekauntha" , function(req,res){
   res.send(person)
 })
 
-app.get('/*', (req, res) => {
+app.get('/*/', (req, res) => {
   vigits = vigits+1;
   res.sendFile(__dirname + '/index.html');
 
@@ -50,7 +50,7 @@ app.post('/send',function(req,res){
   res.send("SUCCESS");
 });
 
-app.post('/*',function(req,res){
+app.post('/*/',function(req,res){
 
   res.send("no such page");
 });
