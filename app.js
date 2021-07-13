@@ -55,6 +55,12 @@ app.post('/*',function(req,res){
   res.send("no such page");
 });
 
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
+
+
 
 io.on('connection', (socket) => {
 
