@@ -26,6 +26,7 @@ app.get("/kitneaadmithe" , function(req,res){
 })
 
 app.get("/rasodemekauntha" , function(req,res){
+  console.log("rasodemekauntha==-----------------------");
   res.send(person)
 })
 app.get('/:id',function(req,res){
@@ -68,7 +69,6 @@ io.on('connection', (socket) => {
 
   // every socket connection will have unique socket.id which we use to store in socket and identify if disconnected.
   person[client_ip_address] = connectedUser
-  
   socket.on('disconnect', () => {
     console.log('user disconnected');
   });
